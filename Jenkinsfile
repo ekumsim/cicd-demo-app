@@ -18,8 +18,9 @@ pipeline {
                 sh 'echo image'
                  sh """
                 docker images
-                docker build -t ketankvishwakarma/cicd-demo-app:01 .
+                docker build -t ekumsim/ci-demo:01 .
                 docker images
+                docker push ekumsim/ci-demo:01
                 """ 
             }
         }
@@ -28,7 +29,7 @@ pipeline {
                 sh 'pwd'
                 sh """
                     docker ps
-                    docker run -d -p 9000:9000 ketankvishwakarma/cicd-demo-app:01
+                    docker run -d -p 9000:9000 ekumsim/ci-demo:01
                     docker ps
                     docker stop \$(docker ps -q) 
                 """
