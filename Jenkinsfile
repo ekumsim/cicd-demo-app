@@ -20,6 +20,7 @@ pipeline {
                 docker images
                 docker build -t ekumsim/ci-demo:01 .
                 docker images
+                docker login -u ekumsim -p Thinkpad@1437
                 docker push ekumsim/ci-demo:01
                 """ 
             }
