@@ -18,13 +18,14 @@ public class SimpleRestControllerTest {
     @Autowired
     MockMvc mockMvc;
 
+ /**
     @Test
     void testHello() throws Exception {
         mockMvc.perform(get("/"))
         .andExpect(status().isOk())
         .andExpect(MockMvcResultMatchers.content().string("Hello!"));
     }
-
+*/
     @Test
     void testHelloSomethig() throws Exception {
         mockMvc.perform(get("/sweety"))
