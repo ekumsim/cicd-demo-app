@@ -9,7 +9,7 @@ pipeline {
         }
          stage('Test') {
             steps {
-                 sh 'echo test'
+                 sh 'echo demo test'
                  sh './mvnw  test'
             }
         }
