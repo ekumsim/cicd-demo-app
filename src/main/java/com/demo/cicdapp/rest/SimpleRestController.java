@@ -11,7 +11,7 @@ public class SimpleRestController {
     
     @GetMapping
     public String hello(){
-        return "Hello"+"!";
+        return "Hello"+" from Version3!";
     }
 
     @GetMapping("/{something}")
